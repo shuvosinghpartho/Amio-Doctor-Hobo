@@ -13,7 +13,6 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     justify-content: center;
-    
 }
 
 /* Header Navigation */
@@ -36,7 +35,7 @@ header nav ul {
     margin: 0;
     max-width: 1200px;
     margin: 0 auto;
-    flex-wrap: wrap; /* Wraps links for smaller screens */
+    flex-wrap: wrap;
 }
 
 header nav ul li {
@@ -60,13 +59,14 @@ header nav ul li a:hover {
     transform: scale(1.1);
 }
 
-
 /* Hero Section */
 .hero {
     background: url('https://img.freepik.com/free-photo/top-view-medicine-blue-background_23-2149341569.jpg?t=st=1736358458~exp=1736362058~hmac=b9331bf4949100cb1e9434b1d2b93c09c289c83aa49bd3c265c437096c14ac4e&w=996') no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 5rem 1rem;
+    background-size: cover;
+    background-position: center;
 }
 
 .hero h2 {
@@ -235,4 +235,59 @@ footer {
     text-align: center;
     padding: 1rem 0;
     font-size: 0.9rem;
+}
+
+/* Media Queries for Mobile and Tablet Devices */
+@media (max-width: 768px) {
+    /* Adjust Hero Section */
+    .hero {
+        padding: 3rem 1rem; /* Reduce padding on mobile */
+    }
+
+    .hero h2 {
+        font-size: 2rem; /* Adjust font size */
+    }
+
+    .hero p {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .feature-list {
+        grid-template-columns: 1fr; /* Stack feature cards vertically */
+    }
+
+    .feature-card {
+        padding: 1rem;
+    }
+
+    .feature-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .feature-content p {
+        font-size: 0.85rem;
+    }
+
+    /* Contact Form Adjustments */
+    .contact form {
+        padding: 1rem;
+    }
+
+    .contact form label,
+    .contact form input,
+    .contact form textarea,
+    .contact form button {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Queries for Larger Tablets and Small Laptops */
+@media (max-width: 1024px) {
+    .hero h2 {
+        font-size: 2.2rem; /* Slightly larger font size for medium devices */
+    }
+
+    .feature-list {
+        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+    }
 }
