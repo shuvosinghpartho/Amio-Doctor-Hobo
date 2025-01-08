@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Study Platform</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="nav-container">
+            <h1>আমি ডাক্তার হবো</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">🏠 Home</a></li>
+                    <li><a href="#features">✨ Features</a></li>
+                    <li><a href="#resources" onclick="openResources()">📚 Resources</a></li>
+                    <li><a href="#contact">📞 Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Empowering MBBS Students in Bangladesh</h2>
+            <p>Your gateway to interactive learning and medical excellence.</p>
+            <button onclick="scrollToFeatures()">Explore Features</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2>Platform Features</h2>
+            <div class="feature-list">
+                <!-- Feature Card 1 -->
+                <div class="feature-card">
+                    <div class="feature-image-container">
+                        <img src="https://img.freepik.com/free-vector/cartoon-online-medical-conference-illustrated_23-2148885536.jpg" alt="Video Lectures">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Video Lectures</h3>
+                        <p>High-quality lectures from medical experts, organized by subject.</p>
+                    </div>
+                </div>
+                <!-- Feature Card 2 -->
+                <div class="feature-card">
+                    <div class="feature-image-container">
+                        <img src="https://img.freepik.com/free-vector/doctor-human-model-classroom_1308-46140.jpg?t=st=1736355069~exp=1736358669~hmac=b80191e98458bc7f5a156ad6b870d23920774117a132da2d2d08c59f7eac2c49&w=740" alt="Interactive Anatomy">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Interactive Anatomy</h3>
+                        <p>3D models to explore the human body with ease.</p>
+                    </div>
+                </div>
+                <!-- Feature Card 3 -->
+                <div class="feature-card">
+                    <div class="feature-image-container">
+                        <img src="https://img.freepik.com/free-photo/smiling-young-female-doctor-wearing-medical-robe-stethoscope-sitting-desk-with-medical-tools-looking-showing-clipboard-isolated_141793-68955.jpg" alt="Mock Exams">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Mock Exams</h3>
+                        <p>Simulated tests to prepare you for real exams with analytics.</p>
+                    </div>
+                </div>
+                <!-- Feature Card 4 -->
+                <div class="feature-card">
+                    <div class="feature-image-container">
+                        <img src="https://img.freepik.com/free-photo/cunfused-young-male-doctor-with-medical-glasses-wearing-medical-robe-with-stethoscope-sitting-desk_141793-98656.jpg" alt="Study Resources">
+                    </div>
+                    <div class="feature-content">
+                        <h3>Study Resources</h3>
+                        <p>Access e-books, notes, and guides in Bangla and English.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources">
+        <div class="container">
+            <h2>Study Resources</h2>
+            <p>Browse and download the best study materials for MBBS students.</p>
+            <button onclick="alert('Feature Coming Soon!')">View Resources</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Medical Study Platform. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
