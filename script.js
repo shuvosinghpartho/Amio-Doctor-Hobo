@@ -68,3 +68,19 @@ contactForm.addEventListener("submit", event => {
     alert("Thank you for your message! We'll get back to you soon.");
     contactForm.reset();
 });
+
+
+
+
+// document.querySelectorAll('.footer-links ul li a').forEach(item => {
+//     item.addEventListener('click', event => {
+//       alert(`You clicked on ${event.target.innerText}`);
+//     });
+//   });
+
+
+
+document.getElementById("demoForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    alert("Thank you! We will contact you shortly.");
+});
