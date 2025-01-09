@@ -26,6 +26,7 @@ header {
     z-index: 1000;
 }
 
+
 header nav ul {
     display: flex;
     justify-content: center;
@@ -33,14 +34,11 @@ header nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    max-width: 1200px;
-    margin: 0 auto;
     flex-wrap: wrap;
 }
 
 header nav ul li {
     margin: 0 15px;
-    position: relative;
 }
 
 header nav ul li a {
@@ -48,9 +46,6 @@ header nav ul li a {
     color: #fff;
     font-weight: bold;
     font-size: 1rem;
-    display: flex;
-    align-items: center;
-    gap: 5px;
     transition: transform 0.2s ease, color 0.3s ease;
 }
 
@@ -61,7 +56,7 @@ header nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: url('https://img.freepik.com/free-photo/top-view-medicine-blue-background_23-2149341569.jpg?t=st=1736358458~exp=1736362058~hmac=b9331bf4949100cb1e9434b1d2b93c09c289c83aa49bd3c265c437096c14ac4e&w=996') no-repeat center center/cover;
+    background: url("background2.jpg") no-repeat center center/cover;
     color: #fff;
     text-align: center;
     padding: 5rem 1rem;
@@ -145,37 +140,93 @@ header nav ul li a:hover {
     color: #555;
 }
 
-/* Resources Section */
-.resources {
-    background: #f4f4f4;
-    padding: 2rem 0;
-    text-align: center;
-}
-
+/* Updated Resources Section */
 .resources h2 {
+    text-align: center;
+    margin-bottom: 2rem;
     font-size: 2rem;
-    margin-bottom: 1rem;
 }
 
 .resources p {
+    text-align: center;
+    margin-bottom: 2rem;
     font-size: 1rem;
-    color: #555;
-    margin-bottom: 1.5rem;
 }
 
-.resources button {
-    padding: 0.8rem 1.5rem;
+.resources {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+}
+
+.resource-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.resource-card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-10px);
+}
+
+.resource-image img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.resource-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.resource-content h3 {
+    font-size: 1.6rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.resource-content p {
     font-size: 1rem;
-    background: #007bff;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.resource-content a {
+    text-decoration: none;
     color: #fff;
-    border: none;
+    background-color: #4CAF50;
+    padding: 10px 20px;
     border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
+    transition: background-color 0.3s ease;
 }
 
-.resources button:hover {
-    background: #0056b3;
+.resource-content a:hover {
+    background-color: #45a049;
+}
+
+/* Scroll Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.resource-card.visible {
+    animation: fadeInUp 0.6s ease forwards;
 }
 
 /* Contact Section */
@@ -239,55 +290,51 @@ footer {
 
 /* Media Queries for Mobile and Tablet Devices */
 @media (max-width: 768px) {
-    /* Adjust Hero Section */
     .hero {
-        padding: 3rem 1rem; /* Reduce padding on mobile */
+        padding: 3rem 1rem;
     }
 
     .hero h2 {
-        font-size: 2rem; /* Adjust font size */
+        font-size: 2rem;
     }
 
     .hero p {
-        font-size: 1rem; /* Adjust font size */
+        font-size: 1rem;
     }
 
     .feature-list {
-        grid-template-columns: 1fr; /* Stack feature cards vertically */
+        grid-template-columns: 1fr;
     }
 
-    .feature-card {
-        padding: 1rem;
+    .resource-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
-    .feature-content h3 {
-        font-size: 1.1rem;
-    }
-
-    .feature-content p {
-        font-size: 0.85rem;
-    }
-
-    /* Contact Form Adjustments */
     .contact form {
         padding: 1rem;
-    }
-
-    .contact form label,
-    .contact form input,
-    .contact form textarea,
-    .contact form button {
-        font-size: 0.9rem;
     }
 }
 
 /* Media Queries for Larger Tablets and Small Laptops */
 @media (max-width: 1024px) {
     .hero h2 {
-        font-size: 2.2rem; /* Slightly larger font size for medium devices */
+        font-size: 2.2rem;
     }
 
     .feature-list {
-        grid-template-columns: repeat(2, 1fr); /* Two-column layout */
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .resource-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Media Queries for Large Screens */
+@media (min-width: 1200px) {
+    .resource-list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
