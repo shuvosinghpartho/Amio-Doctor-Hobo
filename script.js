@@ -95,3 +95,30 @@ function openPlaylist(url) {
 function openExamMaterial(url) {
     window.open(url, '_blank');
 }
+
+
+
+document.getElementById("feedback-form").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+
+    // Validate Name Input
+    if (name) {
+        const feedbackSection = document.querySelector(".feedback");
+
+        // Replace Feedback Section Content with Thank You Animation
+        feedbackSection.innerHTML = `
+            <div class="thank-you">
+                <h2>Thank You, ${name}!</h2>
+                <p>We appreciate your feedback. Your input helps us improve!</p>
+                <img src="https://media.giphy.com/media/3o7abldj0b3rxrZUxW/giphy.gif" alt="Thank You Animation" />
+            </div>
+        `;
+    } else {
+        alert("Please enter your name before submitting.");
+    }
+});
+
+
+

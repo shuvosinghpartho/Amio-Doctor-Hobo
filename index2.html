@@ -82,9 +82,9 @@
             </div>
 
             <!-- Card for Viva Materials -->
-            <div class="exam-card" onclick="openExamMaterial('https://example.com/first-year-viva-materials')">
+            <div class="exam-card" onclick="openExamMaterial('https://www.scribd.com/document/229232704/Viva-Questions-of-Final-Professional-Examination')">
                 <div class="exam-image">
-                    <img src="https://via.placeholder.com/150" alt="Viva Materials">
+                    <img src="styles/background5.jpg" alt="Viva Materials">
                 </div>
                 <div class="exam-content">
                     <h3>Viva Exam Questions</h3>
@@ -93,6 +93,53 @@
             </div>
         </div>
     </section>
+
+    <!-- Feedback Section -->
+<section class="feedback">
+    <h2>We Value Your Feedback!</h2>
+    <p>Help us improve by sharing your thoughts and suggestions.</p>
+    <div class="feedback-container">
+        <form id="feedback-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Your Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="feedback">Your Feedback</label>
+                <textarea id="feedback" name="feedback" placeholder="Enter your feedback" rows="5" required></textarea>
+            </div>
+            <button type="submit">Submit Feedback</button>
+        </form>
+    </div>
+</section>
+
+<script>
+    document.getElementById("feedback-form").addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value;
+
+        if (name) {
+            const feedbackSection = document.querySelector(".feedback");
+
+            feedbackSection.innerHTML = `
+                <div class="thank-you">
+                    <h2>Thank You, ${name}!</h2>
+                    <p>We appreciate your feedback. Your input helps us improve!</p>
+                    <img src="https://media.giphy.com/media/3o7abldj0b3rxrZUxW/giphy.gif" alt="Thank You Animation" />
+                </div>
+            `;
+        } else {
+            alert("Please enter your name before submitting.");
+        }
+    });
+</script>
+
+
 
     <!-- Footer Section -->
     <footer>
