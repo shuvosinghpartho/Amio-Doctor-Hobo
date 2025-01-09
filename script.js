@@ -84,3 +84,14 @@ document.getElementById("demoForm").addEventListener("submit", function(event) {
     event.preventDefault();
     alert("Thank you! We will contact you shortly.");
 });
+
+
+// Function to open the YouTube playlist in a new tab
+function openPlaylist(url) {
+    window.open(url, "_blank");
+}
+
+// Add this function to your existing script.js file
+function openExamMaterial(url) {
+    window.open(url, '_blank');
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Lectures</title>
+    <link rel="icon" href="styles/1.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="index.html">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>MBBS Video Lectures</h2>
+        <p>Explore important YouTube playlists for MBBS students subject-wise.</p>
+    </section>
+
+    <!-- Playlist Section -->
+    <section class="playlists">
+        <h2>Subject-Wise Playlists</h2>
+        <div class="playlist-cards">
+            <!-- Card for Anatomy Playlist -->
+            <div class="playlist-card"
+                onclick="openPlaylist('https://youtube.com/playlist?list=PLIsHYgx_EIICGGERGIIcLtKdqRBqRiB6a&si=Uhl7ag0C1x3jkqlq')">
+                <div class="playlist-image">
+                    <img src="https://i.ytimg.com/vi/yfC68-wk6IU/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLBLHyxD2-55qnO-JpT9iS3VjaM9eQ"
+                        alt="Anatomy">
+                </div>
+                <div class="playlist-content">
+                    <h3>Anatomy Lectures</h3>
+                    <p>Learn the human anatomy through expert-led lectures.</p>
+                </div>
+            </div>
+
+            <!-- Card for Physiology Playlist -->
+            <div class="playlist-card"
+                onclick="openPlaylist('https://youtube.com/playlist?list=PLGnOSRdL_YH-DKdZ45j5JUa5j5a5KDAYh&si=UbivF6540dUrSpzk')">
+                <div class="playlist-image">
+                    <img src="https://i.ytimg.com/vi/XyWYoyX4r-M/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLAVe_kX1CHI1LniEZlYsUhSJNqrjQ"
+                        alt="Physiology">
+                </div>
+                <div class="playlist-content">
+                    <h3>Physiology Lectures</h3>
+                    <p>Comprehensive physiology lectures for MBBS students.</p>
+                </div>
+            </div>
+
+            <!-- Card for Biochemistry Playlist -->
+            <div class="playlist-card"
+                onclick="openPlaylist('https://youtube.com/playlist?list=PLt6qWFRjtfTu-AqbjOWjTba1nCnIejJt9&si=F2WMHBaNEWhGuS_B')">
+                <div class="playlist-image">
+                    <img src="https://i.ytimg.com/vi/P0Mm_54ratI/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLASH8j97z-OJJTcaf3vSYTeR2qwSQ"
+                        alt="Biochemistry">
+                </div>
+                <div class="playlist-content">
+                    <h3>Biochemistry Lectures</h3>
+                    <p>Detailed biochemistry concepts and lectures for MBBS students.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <!-- First Year Proff Exam Section -->
+     <section class="exam-materials">
+        <h2>First Year Professional Exam Materials</h2>
+        <p>Find the previous year's professional exam questions and viva materials below:</p>
+        <div class="exam-cards">
+            <!-- Card for Previous Exam Questions -->
+            <div class="exam-card" onclick="openExamMaterial('https://medical.iqcity.in/wp-content/uploads/2021/03/1st-Professional-MBBS-Chapter-wise-Questions.pdf')">
+                <div class="exam-image">
+                    <img src="styles/background4.jpg" alt="Previous Exam Questions">
+                     <!-- <img src="styles/background4.jpg" alt="Previous Exam Questions"> -->
+                </div>
+                <div class="exam-content">
+                    <h3>Previous Year Exam Questions</h3>
+                    <p>Access a collection of questions asked in the previous year's professional exams.</p>
+                </div>
+            </div>
+
+            <!-- Card for Viva Materials -->
+            <div class="exam-card" onclick="openExamMaterial('https://example.com/first-year-viva-materials')">
+                <div class="exam-image">
+                    <img src="https://via.placeholder.com/150" alt="Viva Materials">
+                </div>
+                <div class="exam-content">
+                    <h3>Viva Exam Questions</h3>
+                    <p>Get insights into the viva questions asked during previous years' exams.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 আমিও ডাক্তার হব!. All Rights Reserved.<br />
+            Developed By Shuvo Singh Partho
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
